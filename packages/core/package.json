@@ -1,0 +1,42 @@
+{
+  "name": "@universe/core",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "author": "Asten Mies",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf ./dist ./node_modules",
+    "flush": "rm -rf ./dist",
+    "build": "babel src -d dist",
+    "watch": "babel src -d dist --watch",
+    "relay": "relay-compiler --src ./ --exclude '**/.next/**' '**/node_modules/**' '**/test/**'  '**/__generated__/**' '**/server/**' '**/schema/**' --schema ../core/schema/schema.graphql --verbose"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@babel/runtime-corejs2": "^7.6.2",
+    "babel-plugin-import": "^1.12.2",
+    "graphql": "^14.5.8",
+    "next": "^9.0.7",
+    "react-router-dom": "^5.1.1",
+    "react-router-native": "^5.1.1"
+  },
+  "peerDependencies": {
+    "react": "16.8.3",
+    "react-native": "0.59.8",
+    "react-dom": "16.8.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-styled-components": "^1.10.6",
+    "rimraf": "^2.6.3"
+  },
+  "workspaces": {
+    "nohoist": [
+      "@babel/runtime-corejs2"
+    ]
+  }
+}

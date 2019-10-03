@@ -1,0 +1,43 @@
+{
+  "name": "universe-web",
+  "version": "1.0.0",
+  "scripts": {
+    "prestart": "babel server -d dist",
+    "predev": "babel server -d dist",
+    "dev": "NODE_ENV=development node dist",
+    "start": "NODE_ENV=production node dist/server"
+  },
+  "license": "MIT",
+  "workspaces": {
+    "nohoist": [
+      "react",
+      "react/**",
+      "@babel/runtime-corejs2"
+    ]
+  },
+  "dependencies": {
+    "@babel/runtime-corejs2": "7.6.2",
+    "@universe/core": "1.0.0",
+    "@zeit/next-css": "^1.0.1",
+    "antd": "^3.23.4",
+    "babel-plugin-import": "^1.12.2",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "formik": "^1.5.8",
+    "next": "^9.0.7",
+    "next-transpile-modules": "^2.3.1",
+    "null-loader": "^3.0.0",
+    "react": "16.8.3",
+    "react-dom": "16.8.3",
+    "react-native-web": "^0.11.7",
+    "react-relay": "^5.0.0",
+    "styled-components": "^4.3.2",
+    "styled-normalize": "^8.0.6",
+    "styled-system": "^5.1.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-styled-components": "^1.10.6"
+  }
+}

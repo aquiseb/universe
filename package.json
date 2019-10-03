@@ -1,0 +1,33 @@
+{
+	"name": "universe",
+	"version": "1.0.0",
+	"private": true,
+	"author": "Asten Mies",
+	"license": "MIT",
+	"description": "React-Native & Nextjs SSR & React-Native-Web demo app",
+	"keywords": [
+		"react-native",
+		"next.js",
+		"react-native-web",
+		"react-native-yarn-workspaces",
+		"yarn"
+	],
+	"workspaces": {
+		"packages": [
+			"packages/*",
+			"universe-*"
+		]
+	},
+	"scripts": {
+		"bootstrap": "lerna bootstrap",
+		"relay": "lerna run relay",
+		"watch": "lerna run watch",
+		"build": "lerna run build",
+		"clean": "lerna run clean && rm -rf universe-*/node_modules && rm -rf ./node_modules ./dist && rm -rf yarn.lock",
+		"flush": "lerna run flush && rm -rf ./dist",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"devDependencies": {
+		"lerna": "^3.16.4"
+	}
+}

@@ -1,0 +1,43 @@
+{
+  "name": "universe-mobile-expo",
+  "version": "1.0.0",
+  "private": true,
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "postinstall": "rnw link ../packages",
+    "watch": "rnw watch",
+    "flush": "watchman watch-del-all",
+    "start": "concurrently \"yarn watch\" \"expo start\"",
+    "dev": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@universe/core": "1.0.0",
+    "@babel/runtime-corejs2": "^7.6.2",
+    "expo": "^35.0.0",
+    "react": "16.8.3",
+    "react-dom": "16.8.3",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
+    "react-native-web": "^0.11.7"
+  },
+  "devDependencies": {
+    "react-native-yarn-workspaces": "1.1.0",
+    "babel-preset-expo": "^7.0.0"
+  },
+  "workspaces": {
+    "nohoist": [
+      "expo",
+      "expo/**",
+      "react",
+      "react/**",
+      "react-native",
+      "react-native/**",
+      "react-native-yarn-workspaces",
+      "react-native-yarn-workspaces/**",
+      "@babel/runtime-corejs2"
+    ]
+  }
+}
