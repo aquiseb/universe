@@ -1,23 +1,18 @@
 {
-  "name": "universe-web",
+  "name": "lychee-web",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
+    "clean": "rm -rf ./src/.next node_modules",
     "prestart": "babel server -d dist",
     "predev": "babel server -d dist",
     "dev": "NODE_ENV=development node dist",
     "start": "NODE_ENV=production node dist/server"
   },
   "license": "MIT",
-  "workspaces": {
-    "nohoist": [
-      "react",
-      "react/**",
-      "@babel/runtime-corejs2"
-    ]
-  },
   "dependencies": {
     "@babel/runtime-corejs2": "7.6.2",
-    "@universe/core": "1.0.0",
+    "@lychee/core": "1.0.0",
     "@zeit/next-css": "^1.0.1",
     "antd": "^3.23.4",
     "babel-plugin-import": "^1.12.2",
